@@ -1,57 +1,38 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/runtime/react-refresh.js",
+    "static/runtime/react-refresh.js.map",
+    "static/development/dll/dll_80e163c04e734e50beb0.js",
+    "static/development/dll/dll_80e163c04e734e50beb0.js.map"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
+  ],
   "pages": {
     "/": [
-      "static/runtime/webpack-52b6a6860c8d510d3b23.js",
-      "static/css/commons.ea656e46.chunk.css",
-      "static/chunks/commons.b9990eddd4baf629499d.js",
-      "static/css/styles.d12e0403.chunk.css",
-      "static/chunks/styles.f346ec763c5e2a208d52.js",
-      "static/runtime/main-6c74fb1014721471444b.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ],
     "/_app": [
-      "static/runtime/webpack-52b6a6860c8d510d3b23.js",
-      "static/css/commons.ea656e46.chunk.css",
-      "static/chunks/commons.b9990eddd4baf629499d.js",
-      "static/runtime/main-6c74fb1014721471444b.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-52b6a6860c8d510d3b23.js",
-      "static/css/commons.ea656e46.chunk.css",
-      "static/chunks/commons.b9990eddd4baf629499d.js",
-      "static/runtime/main-6c74fb1014721471444b.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
-    "/extras": [
-      "static/runtime/webpack-52b6a6860c8d510d3b23.js",
-      "static/css/commons.ea656e46.chunk.css",
-      "static/chunks/commons.b9990eddd4baf629499d.js",
-      "static/css/styles.d12e0403.chunk.css",
-      "static/chunks/styles.f346ec763c5e2a208d52.js",
-      "static/runtime/main-6c74fb1014721471444b.js"
+    "/_polyfills": [
+      "static/runtime/polyfills.js",
+      "static/runtime/polyfills.js.map"
     ],
     "/index": [
-      "static/runtime/webpack-52b6a6860c8d510d3b23.js",
-      "static/css/commons.ea656e46.chunk.css",
-      "static/chunks/commons.b9990eddd4baf629499d.js",
-      "static/css/styles.d12e0403.chunk.css",
-      "static/chunks/styles.f346ec763c5e2a208d52.js",
-      "static/runtime/main-6c74fb1014721471444b.js"
-    ],
-    "/projects/react-annotation-tool": [
-      "static/runtime/webpack-52b6a6860c8d510d3b23.js",
-      "static/css/commons.ea656e46.chunk.css",
-      "static/chunks/commons.b9990eddd4baf629499d.js",
-      "static/css/styles.d12e0403.chunk.css",
-      "static/chunks/styles.f346ec763c5e2a208d52.js",
-      "static/runtime/main-6c74fb1014721471444b.js"
-    ],
-    "/react-annotation-tool": [
-      "static/runtime/webpack-52b6a6860c8d510d3b23.js",
-      "static/css/commons.ea656e46.chunk.css",
-      "static/chunks/commons.b9990eddd4baf629499d.js",
-      "static/css/styles.d12e0403.chunk.css",
-      "static/chunks/styles.f346ec763c5e2a208d52.js",
-      "static/runtime/main-6c74fb1014721471444b.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ]
   }
 }
