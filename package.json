@@ -29,5 +29,8 @@
   },
   "devDependencies": {
     "@now/node": "^1.5.1"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
