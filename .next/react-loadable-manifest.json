@@ -1,0 +1,70 @@
+{
+  "../../components/imageAnnotationDemo/ImageAnnotationDemo.js": [
+    {
+      "id": "+SFK",
+      "name": "./node_modules/core-js/library/fn/symbol/index.js",
+      "file": "static/chunks/commons.b9990eddd4baf629499d.js",
+      "publicPath": "static/chunks/commons.b9990eddd4baf629499d.js"
+    },
+    {
+      "id": "PZz6",
+      "name": "./components/imageAnnotationDemo/ImageAnnotationDemo.js",
+      "file": "static/chunks/72e1.7f7ca319b5f83fc107b4.js",
+      "publicPath": "static/chunks/72e1.7f7ca319b5f83fc107b4.js"
+    }
+  ],
+  "../../components/videoAnnotationDemo/VideoAnnotationDemo-orig.js": [
+    {
+      "id": "+SFK",
+      "name": "./node_modules/core-js/library/fn/symbol/index.js",
+      "file": "static/chunks/commons.b9990eddd4baf629499d.js",
+      "publicPath": "static/chunks/commons.b9990eddd4baf629499d.js"
+    },
+    {
+      "id": "oPZB",
+      "name": "./pages/extras/index.css",
+      "file": "static/chunks/styles.f346ec763c5e2a208d52.js",
+      "publicPath": "static/chunks/styles.f346ec763c5e2a208d52.js"
+    },
+    {
+      "id": "/6c9",
+      "name": "./node_modules/react-player/lib/players/YouTube.js",
+      "file": "static/chunks/462d.e8c6471f61b85b90e15f.js",
+      "publicPath": "static/chunks/462d.e8c6471f61b85b90e15f.js"
+    }
+  ],
+  "../components/imageAnnotationDemo/ImageAnnotationDemo.js": [
+    {
+      "id": "+SFK",
+      "name": "./node_modules/core-js/library/fn/symbol/index.js",
+      "file": "static/chunks/commons.b9990eddd4baf629499d.js",
+      "publicPath": "static/chunks/commons.b9990eddd4baf629499d.js"
+    },
+    {
+      "id": "PZz6",
+      "name": "./components/imageAnnotationDemo/ImageAnnotationDemo.js",
+      "file": "static/chunks/72e1.7f7ca319b5f83fc107b4.js",
+      "publicPath": "static/chunks/72e1.7f7ca319b5f83fc107b4.js"
+    }
+  ],
+  "../components/videoAnnotationDemo/VideoAnnotationDemo.js": [
+    {
+      "id": "+SFK",
+      "name": "./node_modules/core-js/library/fn/symbol/index.js",
+      "file": "static/chunks/commons.b9990eddd4baf629499d.js",
+      "publicPath": "static/chunks/commons.b9990eddd4baf629499d.js"
+    },
+    {
+      "id": "oPZB",
+      "name": "./pages/extras/index.css",
+      "file": "static/chunks/styles.f346ec763c5e2a208d52.js",
+      "publicPath": "static/chunks/styles.f346ec763c5e2a208d52.js"
+    },
+    {
+      "id": "/6c9",
+      "name": "./node_modules/react-player/lib/players/YouTube.js",
+      "file": "static/chunks/4e8b.e858536cbbcdff6e7459.js",
+      "publicPath": "static/chunks/4e8b.e858536cbbcdff6e7459.js"
+    }
+  ]
+}
