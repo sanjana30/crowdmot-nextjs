@@ -215,14 +215,7 @@ const DynamicVideoComponent = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default(
         lineNumber: 22,
         columnNumber: 7
       }
-    }))), __jsx(DynamicImageComponent, {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25,
-        columnNumber: 5
-      }
-    }), __jsx("hr", {
+    }))), __jsx("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -285,6 +278,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-annotation-tool");
+
+/***/ }),
+
+/***/ "react-csv":
+/*!****************************!*\
+  !*** external "react-csv" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-csv");
 
 /***/ }),
 

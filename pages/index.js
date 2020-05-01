@@ -22,7 +22,7 @@ export default class extends React.Component {
 						<img src="https://img.shields.io/npm/v/react-annotation-tool.svg?branch=master" className="img-fluid" alt="Responsive image" />
 					</a>
 				</div>
-				<DynamicImageComponent />
+				{/* <DynamicImageComponent /> */}
 				<hr/>
 				<DynamicVideoComponent />
 			</div>
