@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  {TwoDimensionalVideo}  from "react-annotation-tool"
+import { TwoDimensionalVideo } from "react-annotation-tool"
 import Instructions from "../videoInstruction/VideoInstruction"
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
@@ -210,24 +210,25 @@ class Demo extends Component {
 			}
 
 		})
-		
+
 		console.log("Video url can be found below:")
 		console.log(JSON.stringify(this.state))
 	}
 
 	handleErrorSubmit = event => {
 		event.preventDefault();
-	  	this.setState((preState) => {
-				const { input } = preState;
-				
-				const annotations = this.isJsonString(input.defaultAnnotations) ? input.defaultAnnotations : "[]";
-		  		return { params: {
-							defaultAnnotations: JSON.parse(annotations),
-							url: input.url,
-							annotationWidth: parseInt(input.annotationWidth, 10)
-						}
-				};
-	  		}
+		this.setState((preState) => {
+			const { input } = preState;
+
+			const annotations = this.isJsonString(input.defaultAnnotations) ? input.defaultAnnotations : "[]";
+			return {
+				params: {
+					defaultAnnotations: JSON.parse(annotations),
+					url: input.url,
+					annotationWidth: parseInt(input.annotationWidth, 10)
+				}
+			};
+		}
 		);
 	}
 	handleSubmit = async event => {
@@ -252,22 +253,23 @@ class Demo extends Component {
 		let { url = '', videoWidth = 0, defaultAnnotations = [] } = result;
 		this.setState((preState) => {
 			const { input } = preState;
-			
-			if (result.annotations.length === 0) {
-				defaultAnnotations = this.isJsonString(input.defaultAnnotations) ? JSON.parse(input.defaultAnnotations) : "[]";
+			defaultAnnotations = []
+			if (result.annotations) {
+				if (result.annotations.length === 0) {
+					defaultAnnotations = this.isJsonString(input.defaultAnnotations) ? JSON.parse(input.defaultAnnotations) : "[]";
+				}
+				else {
+					defaultAnnotations = JSON.parse(JSON.stringify(result.annotations));
+				}
 			}
-			else {
-				defaultAnnotations = JSON.parse(JSON.stringify(result.annotations));
-			}
-			
-			
-			
+			//defaultAnnotations = this.isJsonString(input.defaultAnnotations) ? JSON.parse(input.defaultAnnotations) : "[]";
+
 			return {
 				params: {
 					defaultAnnotations,
 					url: input.url,
 					videoWidth: (videoWidth !== 0 ? videoWidth : parseInt(input.videoWidth, 10))
-					
+
 				}
 			};
 		}
@@ -531,124 +533,124 @@ class Demo extends Component {
 		let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(result));
 		return (
 			<>
-			<Container fluid className="py-3">
-				
-				<h1 className="display-4  text-center">CrowdMOT: A Video Annotation Tool</h1>
-				<Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
-					<Col>
-						<Instructions />
-					</Col>
-				</Row>
-				<Form className="mb-2 col-xs-12 col-lg-10 offset-lg-1" onSubmit={this.handleSubmit}>
-					<FormGroup>
-						<Label for="URL"><b>Enter the video URL:</b></Label>
-						<Input type="text" name="url" placeholder="http://..." value={input.url} onChange={this.handleChange} />
-					</FormGroup>
-					<FormGroup>
-						<Label for="Annotation Width">Video Width</Label>
-						<Input type="text" name="videoWidth" placeholder="number" value={input.videoWidth} onChange={this.handleChange} />
-					</FormGroup>
-					<FormGroup>
-						<Label for="exampleFile" className="pr-2">Upload Default Annotations</Label><br></br>
-						<input type="file" name="file" id="exampleFile" ref={this.fileInput} />
-					</FormGroup>
-					<Row className="my-3 col-xs-12 col-lg-10 offset-lg-6">
+				<Container fluid className="py-3">
+
+					<h1 className="display-4  text-center">CrowdMOT: A Video Annotation Tool</h1>
+					<Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
 						<Col>
-							<Button>Submit</Button>
+							<Instructions />
 						</Col>
 					</Row>
-				</Form>
+					<Form className="mb-2 col-xs-12 col-lg-10 offset-lg-1" onSubmit={this.handleSubmit}>
+						<FormGroup>
+							<Label for="URL"><b>Enter the video URL:</b></Label>
+							<Input type="text" name="url" placeholder="http://..." value={input.url} onChange={this.handleChange} />
+						</FormGroup>
+						<FormGroup>
+							<Label for="Annotation Width">Video Width</Label>
+							<Input type="text" name="videoWidth" placeholder="number" value={input.videoWidth} onChange={this.handleChange} />
+						</FormGroup>
+						<FormGroup>
+							<Label for="exampleFile" className="pr-2">Upload Default Annotations</Label><br></br>
+							<input type="file" name="file" id="exampleFile" ref={this.fileInput} />
+						</FormGroup>
+						<Row className="my-3 col-xs-12 col-lg-10 offset-lg-6">
+							<Col>
+								<Button>Submit</Button>
+							</Col>
+						</Row>
+					</Form>
 
-				<Row className="py-3" style={{ background: "rgb(246, 246, 246)" }}>
-					
-					<Col>
-						<TwoDimensionalVideo
-							key={
-								`${JSON.stringify(params.url)}
+					<Row className="py-3" style={{ background: "rgb(246, 246, 246)" }}>
+
+						<Col>
+							<TwoDimensionalVideo
+								key={
+									`${JSON.stringify(params.url)}
 								 ${JSON.stringify(params.defaultAnnotations)}
 								 ${JSON.stringify(params.videoWidth)}
 								 ${JSON.stringify(params.previewHeader)}
 								 ${JSON.stringify(params.previewNoticeList)}`
-								//the last three to be replaced by the two below and change defaultAnnotations to annotations
-								//  ${JSON.stringify(params.annotationWidth)}
-								//  ${JSON.stringify(params.previewNotices)}`
-							}
-							onSubmit={this.handleResultSubmit}
-							url={params.url}
-							//made changes here annotations (on both sides) changed to defaultAnnotation
-							defaultAnnotations={params.defaultAnnotations}
-							videoWidth={params.videoWidth}
-							previewHeader={params.previewHeader}
-							previewNoticeList={params.previewNoticeList}
-							hasReview
-							isEmptyCheckEnable
-							isSplitEnable
-							isShowHideEnable
-							numAnnotationsToBeAdded={20}
-							emptyCheckSubmissionWarningText={params.emptyCheckSubmissionWarningText}
-							emptyCheckAnnotationItemWarningText={params.emptyCheckAnnotationItemWarningText}
-							emptyAnnotationReminderText={params.emptyAnnotationReminderText}
-						//replace everything after defaultannotations with the what is down below
-						// annotationWidth={params.annotationWidth}
-						// numberOfParentAnnotationsToBeAdded={100000}
-						// previewNotices={params.previewNotices}
-						/>
-					</Col>
-					{console.log("Passed annotations: "+JSON.stringify(params.defaultAnnotations))}
-				</Row>
+									//the last three to be replaced by the two below and change defaultAnnotations to annotations
+									//  ${JSON.stringify(params.annotationWidth)}
+									//  ${JSON.stringify(params.previewNotices)}`
+								}
+								onSubmit={this.handleResultSubmit}
+								url={params.url}
+								//made changes here annotations (on both sides) changed to defaultAnnotation
+								defaultAnnotations={params.defaultAnnotations}
+								videoWidth={params.videoWidth}
+								previewHeader={params.previewHeader}
+								previewNoticeList={params.previewNoticeList}
+								hasReview
+								isEmptyCheckEnable
+								isSplitEnable
+								isShowHideEnable
+								numAnnotationsToBeAdded={20}
+								emptyCheckSubmissionWarningText={params.emptyCheckSubmissionWarningText}
+								emptyCheckAnnotationItemWarningText={params.emptyCheckAnnotationItemWarningText}
+								emptyAnnotationReminderText={params.emptyAnnotationReminderText}
+							//replace everything after defaultannotations with the what is down below
+							// annotationWidth={params.annotationWidth}
+							// numberOfParentAnnotationsToBeAdded={100000}
+							// previewNotices={params.previewNotices}
+							/>
+						</Col>
+						{console.log("Passed annotations: " + JSON.stringify(params.defaultAnnotations))}
+					</Row>
 
-				<Row className="my-3 col-xs-12">
-					<Col>
-						<Button color="primary"><CSVLink data={JSON.stringify(result, null, 2)} style={{ color: 'white' }}>Download Raw Data</CSVLink></Button>
-						{console.log(JSON.stringify(result, null, 2))}
-					</Col>
-					<Col>
-						<Button color="primary" onClick={this.getInterpolatedData}>Generate Interpolated Data</Button>
-					</Col>
-					<Col>
-						<Button id="export-interpol" color='primary' style={{
-							display: 'none', color: '#ffffff',
-							border: `1px solid`,
-						}} onClick={this.createTable}>Download Interpolated Data</Button>
-					</Col>
-				</Row>
+					<Row className="my-3 col-xs-12">
+						<Col>
+							<Button color="primary"><CSVLink data={JSON.stringify(result, null, 2)} style={{ color: 'white' }}>Download Raw Data</CSVLink></Button>
+							{console.log(JSON.stringify(result, null, 2))}
+						</Col>
+						<Col>
+							<Button color="primary" onClick={this.getInterpolatedData}>Generate Interpolated Data</Button>
+						</Col>
+						<Col>
+							<Button id="export-interpol" color='primary' style={{
+								display: 'none', color: '#ffffff',
+								border: `1px solid`,
+							}} onClick={this.createTable}>Download Interpolated Data</Button>
+						</Col>
+					</Row>
 
-				{/* create invisible table for interpolated data */}
-				<Row className="my-3 col-xs-12">
-					<Col>
-						<table id="interpol-table" style={{ display: 'none' }}>
-							<tbody>
-								<tr>
-									{/* <th>ID</th> */}
-									<th >Track ID</th>
-									<th>x-min</th>
-									<th>y-min</th>
-									<th>width</th>
-									<th>height</th>
-									<th>Frame</th>
-									<th>Lost</th>
-									<th>Occluded</th>
-									<th>Generated</th>
-									<th>Label</th>
-									<th>Parent</th>
-								</tr>
-							</tbody>
-						</table>
-					</Col>
-				</Row>
-
-
-				<Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
-					<Col>
-						<Card><CardBody><a href={dataStr} className="btn btn-secondary btn-lg" download={`${params.url}.json`}> Download the Annotations</a></CardBody></Card>
+					{/* create invisible table for interpolated data */}
+					<Row className="my-3 col-xs-12">
+						<Col>
+							<table id="interpol-table" style={{ display: 'none' }}>
+								<tbody>
+									<tr>
+										{/* <th>ID</th> */}
+										<th >Track ID</th>
+										<th>x-min</th>
+										<th>y-min</th>
+										<th>width</th>
+										<th>height</th>
+										<th>Frame</th>
+										<th>Lost</th>
+										<th>Occluded</th>
+										<th>Generated</th>
+										<th>Label</th>
+										<th>Parent</th>
+									</tr>
+								</tbody>
+							</table>
+						</Col>
+					</Row>
 
 
-					</Col>  </Row>
+					<Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
+						<Col>
+							<Card><CardBody><a href={dataStr} className="btn btn-secondary btn-lg" download={`${params.url}.json`}> Download the Annotations</a></CardBody></Card>
+
+
+						</Col>  </Row>
 
 
 
-			</Container>
-</>
+				</Container>
+			</>
 		);
 
 
