@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { VideoTool } from "react-annotation-tool"
+import  VideoTool from "react-annotation-tool"
 import Instructions from "../videoInstruction/VideoInstruction"
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';

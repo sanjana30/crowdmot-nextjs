@@ -1,792 +1,4 @@
 {
-  "../components/imageAnnotationDemo/ImageAnnotationDemo.js": [
-    {
-      "id": "./components/imageAnnotationDemo/ImageAnnotationDemo.js",
-      "name": "./components/imageAnnotationDemo/ImageAnnotationDemo.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "name": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/interopRequireDefault.js",
-      "name": "./node_modules/@babel/runtime/helpers/interopRequireDefault.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/classnames/index.js",
-      "name": "./node_modules/classnames/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/dom-helpers/class/addClass.js",
-      "name": "./node_modules/dom-helpers/class/addClass.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/dom-helpers/class/hasClass.js",
-      "name": "./node_modules/dom-helpers/class/hasClass.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/dom-helpers/class/removeClass.js",
-      "name": "./node_modules/dom-helpers/class/removeClass.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/lodash.isfunction/index.js",
-      "name": "./node_modules/lodash.isfunction/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/lodash.isobject/index.js",
-      "name": "./node_modules/lodash.isobject/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/lodash.tonumber/index.js",
-      "name": "./node_modules/lodash.tonumber/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/next/dist/build/polyfills/object-assign.js",
-      "name": "./node_modules/next/dist/build/polyfills/object-assign.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/popper.js/dist/esm/popper.js",
-      "name": "./node_modules/popper.js/dist/esm/popper.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/prop-types/checkPropTypes.js",
-      "name": "./node_modules/prop-types/checkPropTypes.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/prop-types/factoryWithTypeCheckers.js",
-      "name": "./node_modules/prop-types/factoryWithTypeCheckers.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/prop-types/index.js",
-      "name": "./node_modules/prop-types/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
-      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-annotation-tool/dist/bundle.js",
-      "name": "./node_modules/react-annotation-tool/dist/bundle.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-dom/index.js",
-      "name": "./node_modules/react-dom/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js",
-      "name": "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-popper/lib/Arrow.js",
-      "name": "./node_modules/react-popper/lib/Arrow.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-popper/lib/Manager.js",
-      "name": "./node_modules/react-popper/lib/Manager.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-popper/lib/Popper.js",
-      "name": "./node_modules/react-popper/lib/Popper.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-popper/lib/Target.js",
-      "name": "./node_modules/react-popper/lib/Target.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-popper/lib/react-popper.js",
-      "name": "./node_modules/react-popper/lib/react-popper.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-transition-group/CSSTransition.js",
-      "name": "./node_modules/react-transition-group/CSSTransition.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-transition-group/ReplaceTransition.js",
-      "name": "./node_modules/react-transition-group/ReplaceTransition.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-transition-group/Transition.js",
-      "name": "./node_modules/react-transition-group/Transition.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-transition-group/TransitionGroup.js",
-      "name": "./node_modules/react-transition-group/TransitionGroup.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-transition-group/index.js",
-      "name": "./node_modules/react-transition-group/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-transition-group/utils/ChildMapping.js",
-      "name": "./node_modules/react-transition-group/utils/ChildMapping.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/react-transition-group/utils/PropTypes.js",
-      "name": "./node_modules/react-transition-group/utils/PropTypes.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Alert.js",
-      "name": "./node_modules/reactstrap/es/Alert.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Badge.js",
-      "name": "./node_modules/reactstrap/es/Badge.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Breadcrumb.js",
-      "name": "./node_modules/reactstrap/es/Breadcrumb.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/BreadcrumbItem.js",
-      "name": "./node_modules/reactstrap/es/BreadcrumbItem.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Button.js",
-      "name": "./node_modules/reactstrap/es/Button.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ButtonDropdown.js",
-      "name": "./node_modules/reactstrap/es/ButtonDropdown.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ButtonGroup.js",
-      "name": "./node_modules/reactstrap/es/ButtonGroup.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ButtonToolbar.js",
-      "name": "./node_modules/reactstrap/es/ButtonToolbar.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Card.js",
-      "name": "./node_modules/reactstrap/es/Card.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardBlock.js",
-      "name": "./node_modules/reactstrap/es/CardBlock.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardBody.js",
-      "name": "./node_modules/reactstrap/es/CardBody.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardColumns.js",
-      "name": "./node_modules/reactstrap/es/CardColumns.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardDeck.js",
-      "name": "./node_modules/reactstrap/es/CardDeck.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardFooter.js",
-      "name": "./node_modules/reactstrap/es/CardFooter.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardGroup.js",
-      "name": "./node_modules/reactstrap/es/CardGroup.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardHeader.js",
-      "name": "./node_modules/reactstrap/es/CardHeader.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardImg.js",
-      "name": "./node_modules/reactstrap/es/CardImg.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardImgOverlay.js",
-      "name": "./node_modules/reactstrap/es/CardImgOverlay.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardLink.js",
-      "name": "./node_modules/reactstrap/es/CardLink.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardSubtitle.js",
-      "name": "./node_modules/reactstrap/es/CardSubtitle.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardText.js",
-      "name": "./node_modules/reactstrap/es/CardText.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CardTitle.js",
-      "name": "./node_modules/reactstrap/es/CardTitle.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Carousel.js",
-      "name": "./node_modules/reactstrap/es/Carousel.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CarouselCaption.js",
-      "name": "./node_modules/reactstrap/es/CarouselCaption.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CarouselControl.js",
-      "name": "./node_modules/reactstrap/es/CarouselControl.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CarouselIndicators.js",
-      "name": "./node_modules/reactstrap/es/CarouselIndicators.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CarouselItem.js",
-      "name": "./node_modules/reactstrap/es/CarouselItem.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Col.js",
-      "name": "./node_modules/reactstrap/es/Col.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Collapse.js",
-      "name": "./node_modules/reactstrap/es/Collapse.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Container.js",
-      "name": "./node_modules/reactstrap/es/Container.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/CustomInput.js",
-      "name": "./node_modules/reactstrap/es/CustomInput.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Dropdown.js",
-      "name": "./node_modules/reactstrap/es/Dropdown.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/DropdownItem.js",
-      "name": "./node_modules/reactstrap/es/DropdownItem.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/DropdownMenu.js",
-      "name": "./node_modules/reactstrap/es/DropdownMenu.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/DropdownToggle.js",
-      "name": "./node_modules/reactstrap/es/DropdownToggle.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Fade.js",
-      "name": "./node_modules/reactstrap/es/Fade.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Form.js",
-      "name": "./node_modules/reactstrap/es/Form.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/FormFeedback.js",
-      "name": "./node_modules/reactstrap/es/FormFeedback.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/FormGroup.js",
-      "name": "./node_modules/reactstrap/es/FormGroup.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/FormText.js",
-      "name": "./node_modules/reactstrap/es/FormText.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Input.js",
-      "name": "./node_modules/reactstrap/es/Input.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/InputGroup.js",
-      "name": "./node_modules/reactstrap/es/InputGroup.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/InputGroupAddon.js",
-      "name": "./node_modules/reactstrap/es/InputGroupAddon.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/InputGroupButton.js",
-      "name": "./node_modules/reactstrap/es/InputGroupButton.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/InputGroupButtonDropdown.js",
-      "name": "./node_modules/reactstrap/es/InputGroupButtonDropdown.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/InputGroupText.js",
-      "name": "./node_modules/reactstrap/es/InputGroupText.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Jumbotron.js",
-      "name": "./node_modules/reactstrap/es/Jumbotron.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Label.js",
-      "name": "./node_modules/reactstrap/es/Label.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ListGroup.js",
-      "name": "./node_modules/reactstrap/es/ListGroup.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ListGroupItem.js",
-      "name": "./node_modules/reactstrap/es/ListGroupItem.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ListGroupItemHeading.js",
-      "name": "./node_modules/reactstrap/es/ListGroupItemHeading.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ListGroupItemText.js",
-      "name": "./node_modules/reactstrap/es/ListGroupItemText.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Media.js",
-      "name": "./node_modules/reactstrap/es/Media.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Modal.js",
-      "name": "./node_modules/reactstrap/es/Modal.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ModalBody.js",
-      "name": "./node_modules/reactstrap/es/ModalBody.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ModalFooter.js",
-      "name": "./node_modules/reactstrap/es/ModalFooter.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/ModalHeader.js",
-      "name": "./node_modules/reactstrap/es/ModalHeader.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Nav.js",
-      "name": "./node_modules/reactstrap/es/Nav.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/NavDropdown.js",
-      "name": "./node_modules/reactstrap/es/NavDropdown.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/NavItem.js",
-      "name": "./node_modules/reactstrap/es/NavItem.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/NavLink.js",
-      "name": "./node_modules/reactstrap/es/NavLink.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Navbar.js",
-      "name": "./node_modules/reactstrap/es/Navbar.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/NavbarBrand.js",
-      "name": "./node_modules/reactstrap/es/NavbarBrand.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/NavbarToggler.js",
-      "name": "./node_modules/reactstrap/es/NavbarToggler.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Pagination.js",
-      "name": "./node_modules/reactstrap/es/Pagination.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PaginationItem.js",
-      "name": "./node_modules/reactstrap/es/PaginationItem.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PaginationLink.js",
-      "name": "./node_modules/reactstrap/es/PaginationLink.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Popover.js",
-      "name": "./node_modules/reactstrap/es/Popover.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PopoverBody.js",
-      "name": "./node_modules/reactstrap/es/PopoverBody.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PopoverContent.js",
-      "name": "./node_modules/reactstrap/es/PopoverContent.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PopoverHeader.js",
-      "name": "./node_modules/reactstrap/es/PopoverHeader.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PopoverTitle.js",
-      "name": "./node_modules/reactstrap/es/PopoverTitle.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PopperContent.js",
-      "name": "./node_modules/reactstrap/es/PopperContent.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/PopperTargetHelper.js",
-      "name": "./node_modules/reactstrap/es/PopperTargetHelper.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Portal.js",
-      "name": "./node_modules/reactstrap/es/Portal.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Progress.js",
-      "name": "./node_modules/reactstrap/es/Progress.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Row.js",
-      "name": "./node_modules/reactstrap/es/Row.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Spinner.js",
-      "name": "./node_modules/reactstrap/es/Spinner.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/TabContent.js",
-      "name": "./node_modules/reactstrap/es/TabContent.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/TabPane.js",
-      "name": "./node_modules/reactstrap/es/TabPane.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Table.js",
-      "name": "./node_modules/reactstrap/es/Table.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/Tooltip.js",
-      "name": "./node_modules/reactstrap/es/Tooltip.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/TooltipPopoverWrapper.js",
-      "name": "./node_modules/reactstrap/es/TooltipPopoverWrapper.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledAlert.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledAlert.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledButtonDropdown.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledButtonDropdown.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledCarousel.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledCarousel.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledCollapse.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledCollapse.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledDropdown.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledDropdown.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledNavDropdown.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledNavDropdown.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledPopover.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledPopover.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/UncontrolledTooltip.js",
-      "name": "./node_modules/reactstrap/es/UncontrolledTooltip.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/index.js",
-      "name": "./node_modules/reactstrap/es/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/es/utils.js",
-      "name": "./node_modules/reactstrap/es/utils.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/extends.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/extends.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectSpread.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectSpread.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./node_modules/webpack/buildin/global.js",
-      "name": "./node_modules/webpack/buildin/global.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    }
-  ],
   "../components/videoAnnotationDemo/VideoAnnotationDemo.js": [
     {
       "id": "./node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -795,7 +7,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -807,7 +19,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -819,7 +31,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -855,14 +67,14 @@
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
-      "name": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
+      "id": "./node_modules/@babel/runtime/helpers/esm/objectSpread.js",
+      "name": "./node_modules/@babel/runtime/helpers/esm/objectSpread.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/@babel/runtime/helpers/interopRequireDefault.js",
-      "name": "./node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+      "id": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
+      "name": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -873,8 +85,8 @@
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/deepmerge/dist/umd.js",
-      "name": "./node_modules/deepmerge/dist/umd.js",
+      "id": "./node_modules/deepmerge/dist/cjs.js",
+      "name": "./node_modules/deepmerge/dist/cjs.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -893,24 +105,6 @@
     {
       "id": "./node_modules/dom-helpers/class/removeClass.js",
       "name": "./node_modules/dom-helpers/class/removeClass.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/gud/index.js",
-      "name": "./node_modules/gud/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/history/esm/history.js",
-      "name": "./node_modules/history/esm/history.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
-      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -939,50 +133,8 @@
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/mini-create-react-context/dist/esm/index.js",
-      "name": "./node_modules/mini-create-react-context/dist/esm/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/mini-create-react-context/node_modules/@babel/runtime/helpers/inheritsLoose.js",
-      "name": "./node_modules/mini-create-react-context/node_modules/@babel/runtime/helpers/inheritsLoose.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/next/dist/build/polyfills/object-assign.js",
-      "name": "./node_modules/next/dist/build/polyfills/object-assign.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
       "id": "./node_modules/popper.js/dist/esm/popper.js",
       "name": "./node_modules/popper.js/dist/esm/popper.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/prop-types/checkPropTypes.js",
-      "name": "./node_modules/prop-types/checkPropTypes.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/prop-types/factoryWithTypeCheckers.js",
-      "name": "./node_modules/prop-types/factoryWithTypeCheckers.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/prop-types/index.js",
-      "name": "./node_modules/prop-types/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
-      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -1035,44 +187,44 @@
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-icons/fa/index.mjs",
-      "name": "./node_modules/react-icons/fa/index.mjs",
+      "id": "./node_modules/react-icons/fa/index.esm.js",
+      "name": "./node_modules/react-icons/fa/index.esm.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-icons/io/index.mjs",
-      "name": "./node_modules/react-icons/io/index.mjs",
+      "id": "./node_modules/react-icons/io/index.esm.js",
+      "name": "./node_modules/react-icons/io/index.esm.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-icons/lib/iconBase.mjs",
-      "name": "./node_modules/react-icons/lib/iconBase.mjs",
+      "id": "./node_modules/react-icons/lib/esm/iconBase.js",
+      "name": "./node_modules/react-icons/lib/esm/iconBase.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-icons/lib/iconContext.mjs",
-      "name": "./node_modules/react-icons/lib/iconContext.mjs",
+      "id": "./node_modules/react-icons/lib/esm/iconContext.js",
+      "name": "./node_modules/react-icons/lib/esm/iconContext.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-icons/md/index.mjs",
-      "name": "./node_modules/react-icons/md/index.mjs",
+      "id": "./node_modules/react-icons/lib/esm/iconsManifest.js",
+      "name": "./node_modules/react-icons/lib/esm/iconsManifest.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-is/cjs/react-is.development.js",
-      "name": "./node_modules/react-is/cjs/react-is.development.js",
+      "id": "./node_modules/react-icons/lib/esm/index.js",
+      "name": "./node_modules/react-icons/lib/esm/index.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-is/index.js",
-      "name": "./node_modules/react-is/index.js",
+      "id": "./node_modules/react-icons/md/index.esm.js",
+      "name": "./node_modules/react-icons/md/index.esm.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -1221,30 +373,6 @@
       "publicPath": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/react-router-dom/esm/react-router-dom.js",
-      "name": "./node_modules/react-router-dom/esm/react-router-dom.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/react-router/esm/react-router.js",
-      "name": "./node_modules/react-router/esm/react-router.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/react-router/node_modules/isarray/index.js",
-      "name": "./node_modules/react-router/node_modules/isarray/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
-      "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
       "id": "./node_modules/react-transition-group/CSSTransition.js",
       "name": "./node_modules/react-transition-group/CSSTransition.js",
       "file": "static/chunks/1.js",
@@ -1841,66 +969,6 @@
     {
       "id": "./node_modules/reactstrap/es/utils.js",
       "name": "./node_modules/reactstrap/es/utils.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/extends.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/extends.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectSpread.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectSpread.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
-      "name": "./node_modules/reactstrap/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/resolve-pathname/esm/resolve-pathname.js",
-      "name": "./node_modules/resolve-pathname/esm/resolve-pathname.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
-      "name": "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/tiny-warning/dist/tiny-warning.esm.js",
-      "name": "./node_modules/tiny-warning/dist/tiny-warning.esm.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/value-equal/esm/value-equal.js",
-      "name": "./node_modules/value-equal/esm/value-equal.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },

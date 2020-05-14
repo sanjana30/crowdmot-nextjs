@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { VideoTool } from "react-annotation-tool"
+import  {TwoDimensionalVideo}  from "react-annotation-tool"
 import Instructions from "../videoInstruction/VideoInstruction"
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Link, BrowserRouter, Switch } from 'react-router-dom';
 import { CSVLink, CSVDownload } from "react-csv";
-// import { array } from 'prop-types';
-// import ReactHTMLTableToExcel from 'react-html-table-to-excel';
-// import { MdBubbleChart } from 'react-icons/md';
 
 class Demo extends Component {
 	constructor(props) {
@@ -200,7 +196,7 @@ class Demo extends Component {
 
 	handleResultSubmit = result => {
 		this.setState({ result: result });
-		console.log(JSON.stringify(this.state.result))
+
 	}
 
 	handleChange = event => {
@@ -214,23 +210,26 @@ class Demo extends Component {
 			}
 
 		})
+		
+		console.log("Video url can be found below:")
+		console.log(JSON.stringify(this.state))
 	}
 
-	// handleSubmit = event => {
-	// 	event.preventDefault();
-	//   	this.setState((preState) => {
-	// 			const { input } = preState;
-	// 			const annotations = this.isJsonString(input.annotations) ? input.annotations : "[]";
-	// 	  		return { params: {
-	// 						annotations: JSON.parse(annotations),
-	// 						url: input.url,
-	// 						annotationWidth: parseInt(input.annotationWidth, 10)
-	// 					}
-	// 			};
-	//   		}
-	// 	);
-	// }
-	handleSubmit = async event => {
+	handleSubmit = event => {
+		event.preventDefault();
+	  	this.setState((preState) => {
+				const { input } = preState;
+				const annotations = this.isJsonString(input.defaultAnnotations) ? input.defaultAnnotations : "[]";
+		  		return { params: {
+							annotations: JSON.parse(annotations),
+							url: input.url,
+							annotationWidth: parseInt(input.annotationWidth, 10)
+						}
+				};
+	  		}
+		);
+	}
+	handleErrorSubmit = async event => {
 		event.preventDefault();
 		let result = {};
 		if (this.fileInput.current.files[0]) {
@@ -525,8 +524,9 @@ class Demo extends Component {
 		const { result, input, params } = this.state
 		let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(result));
 		return (
+			<>
 			<Container fluid className="py-3">
-				<a href={"/login"}>Login</a><br />
+				
 				<h1 className="display-4  text-center">CrowdMOT: A Video Annotation Tool</h1>
 				<Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
 					<Col>
@@ -554,8 +554,9 @@ class Demo extends Component {
 				</Form>
 
 				<Row className="py-3" style={{ background: "rgb(246, 246, 246)" }}>
+					
 					<Col>
-						<VideoTool
+						<TwoDimensionalVideo
 							key={
 								`${JSON.stringify(params.url)}
 								 ${JSON.stringify(params.defaultAnnotations)}
@@ -640,7 +641,7 @@ class Demo extends Component {
 
 
 			</Container>
-
+</>
 		);
 
 

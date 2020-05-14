@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css';
-const DynamicImageComponent = dynamic(import('../components/imageAnnotationDemo/ImageAnnotationDemo.js'), {
-  ssr: false
-})
+
+// const DynamicImageComponent = dynamic(import('../components/imageAnnotationDemo/ImageAnnotationDemo.js'), {
+//   ssr: false
+// })
 const DynamicVideoComponent = dynamic(import('../components/videoAnnotationDemo/VideoAnnotationDemo.js'), {
   ssr: false
 })
 
-export default class extends React.Component {
+export default class Index extends React.Component {
   static async getInitialProps({ req }) {
     const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
     return { userAgent }
@@ -16,7 +18,11 @@ export default class extends React.Component {
 
   render() {
     return (
+      
 			<div>
+        <Link href="/login"><button>Login</button>
+        </Link>
+       
 				<div className="fixed-top px-3 text-right">
 					<a href="https://www.npmjs.com/package/react-annotation-tool">
 						<img src="https://img.shields.io/npm/v/react-annotation-tool.svg?branch=master" className="img-fluid" alt="Responsive image" />
@@ -24,8 +30,9 @@ export default class extends React.Component {
 				</div>
 				{/* <DynamicImageComponent /> */}
 				<hr/>
-				<DynamicVideoComponent />
+				<DynamicVideoComponent/>
 			</div>
+      
     )
   }
 }
