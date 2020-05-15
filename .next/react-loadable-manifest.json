@@ -7,7 +7,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 3,
+      "id": 2,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -19,7 +19,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -31,7 +31,7 @@
       "publicPath": "static/chunks/styles.js"
     },
     {
-      "id": 5,
+      "id": 4,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -45,12 +45,6 @@
     {
       "id": "./components/videoInstruction/VideoInstruction.js",
       "name": "./components/videoInstruction/VideoInstruction.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
-      "name": "./node_modules/@babel/runtime/helpers/esm/defineProperty.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -81,12 +75,6 @@
     {
       "id": "./node_modules/classnames/index.js",
       "name": "./node_modules/classnames/index.js",
-      "file": "static/chunks/1.js",
-      "publicPath": "static/chunks/1.js"
-    },
-    {
-      "id": "./node_modules/deepmerge/dist/cjs.js",
-      "name": "./node_modules/deepmerge/dist/cjs.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },
@@ -339,6 +327,12 @@
     {
       "id": "./node_modules/react-player/lib/utils.js",
       "name": "./node_modules/react-player/lib/utils.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    },
+    {
+      "id": "./node_modules/react-player/node_modules/deepmerge/dist/cjs.js",
+      "name": "./node_modules/react-player/node_modules/deepmerge/dist/cjs.js",
       "file": "static/chunks/1.js",
       "publicPath": "static/chunks/1.js"
     },

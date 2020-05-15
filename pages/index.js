@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import useAuth from "../hooks/useAuth";
+import AuthService from "../services/auth";
 
 // const DynamicImageComponent = dynamic(import('../components/imageAnnotationDemo/ImageAnnotationDemo.js'), {
 //   ssr: false
@@ -9,12 +11,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const DynamicVideoComponent = dynamic(import('../components/videoAnnotationDemo/VideoAnnotationDemo.js'), {
   ssr: false
 })
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      user: await AuthService.getUserFromCookie(context.req),
+    },
+  };
+}
 
 export default class Index extends React.Component {
-  static async getInitialProps({ req }) {
-    const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
-    return { userAgent }
-  }
+  // static async getInitialProps({ req }) {
+  //   const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
+  //   return { userAgent }
+  // }
 
   render() {
     return (

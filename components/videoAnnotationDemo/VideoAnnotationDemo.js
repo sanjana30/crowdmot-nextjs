@@ -5,6 +5,7 @@ import { Container, Row, Col, Card, CardBody, CardTitle, CardText } from 'reacts
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { CSVLink, CSVDownload } from "react-csv";
 
+
 class Demo extends Component {
 	constructor(props) {
 		super(props)
@@ -263,7 +264,7 @@ class Demo extends Component {
 				}
 			}
 			//defaultAnnotations = this.isJsonString(input.defaultAnnotations) ? JSON.parse(input.defaultAnnotations) : "[]";
-
+		
 			return {
 				params: {
 					defaultAnnotations,
@@ -614,7 +615,7 @@ class Demo extends Component {
 							}} onClick={this.createTable}>Download Interpolated Data</Button>
 						</Col>
 					</Row>
-
+						
 					{/* create invisible table for interpolated data */}
 					<Row className="my-3 col-xs-12">
 						<Col>

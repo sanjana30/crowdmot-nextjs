@@ -1,85 +1,141 @@
-import { useState, useReducer } from 'react'
-import Button from '../components/Button.js'
-import Field from '../components/Field.js'
-import Input from '../components/Input.js'
-import Label from '../components/Label.js'
-import EmailService from '../services/email.js'
+import { useState } from "react";
+import { Formik, Form } from "formik";
+import fetch from "isomorphic-unfetch";
+import * as Yup from "yup";
+import Router from "next/router";
+import Cookie from "js-cookie";
+import Input from "../components/Input";
+import Field from "../components/Field";
+import Label from "../components/Label";
+import Button from "../components/Button";
 
-function reducer(state, action) {
-    let error;
-    switch (action.type) {
-        case 'update-name':
-            error = action.value?.length < 2 ? 'not valid' : undefined
-            return { ...state, name: action.value, errors: { ...state.errors, name: error } };
-        case 'update-email':
-            error = !EmailService.valid(action.value) ? 'not valid' : undefined
-            return { ...state, email: action.value, errors: { ...state.errors, email: error } };
-        case 'update-password':
-            error = action.value?.length < 7 ? 'too short' : undefined
-            return { ...state, password: action.value, errors: { ...state.errors, password: error } };
-        default:
-            return state;
-    }
-    return state;
-}
+const SignupSchema = (isSignUp) =>
+  Yup.object().shape({
+    name: isSignUp && Yup.string().min(2, "too short").required("required"),
+    email: Yup.string().email("not valid").required("required"),
+    password: Yup.string().min(6, "too short").required("required"),
+  });
 
 export default (props) => {
-    const [isSignUp, setIsSignUp] = useState(false);
-    //{name: String, password: String, email: String, error: {name, password, email}}
+  const [isSignUp, setIsSignUp] = useState(false);
 
-    const [state, dispatch] = useReducer(reducer, {});
-    const hasError = () => {
-        if (isSignUp) {
-            //check name, email, password
-            return (
-                    !(state.name && state.email && state.password) || 
-                    state.errors.name != undefined || state.errors.email != undefined || state.errors.password != undefined
-                    // Object.values(state.errors ?? {}).filter(Boolean).length > 0
-            );
-        } else {
-            
-            //check email , password
-            return (
-                    !(state.email && state.password) || 
-                    state.errors.email != undefined || state.errors.password != undefined
-                    // Object.values(state.errors ?? {}).filter(Boolean).length >0
-                    );
-        }
+  const handleSubmit = async (values, context) => {
+    const request = await fetch("/api/authenticate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...values,
+        isSignUp,
+      }),
+    });
+
+    context.setSubmitting(false);
+
+    if (request.ok) {
+      const token = await request.text();
+
+      Cookie.set("_wsp", token, {
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+      });
+
+      process.browser && Router.push("/");
+    } else {
+      // errors!
+      const error = await request.text();
+
+      context.setErrors({
+        general:
+          error ||
+          "There was a problem authenticating you with that email and password combination.",
+      });
     }
+  };
 
-    return <>
-        <div className="page">
-            <div className="form">
+  return (
+    <>
+      <div className="page">
+        <Formik
+          initialValues={{
+            name: "",
+            email: "",
+            password: "",
+          }}
+          validationSchema={SignupSchema(isSignUp)}
+          onSubmit={handleSubmit}
+        >
+          {({
+            errors,
+            touched,
+            values,
+            isSubmitting,
+            isValid,
+            getFieldProps,
+          }) => (
+            <Form>
+              <div className="form">
                 {isSignUp && (
-                    <>
-                        <Field>
-                            <Label error={state.errors?.name}> Name</Label>
-                            <Input name="name" type="text" value={state.name} onChange={({ target }) => dispatch({ type: 'update-name', value: target.value })} />
-                        </Field>
-                    </>
+                  <Field>
+                    <Label htmlFor="name" error={touched.name && errors.name}>
+                      👩‍💻 Name
+                    </Label>
+                    <Input
+                      name="name"
+                      id="name"
+                      type="text"
+                      {...getFieldProps("name")}
+                    />
+                  </Field>
                 )}
                 <Field>
-                    <Label error={state.errors?.email}> Email</Label>
-                    <Input name="email" type="email" value={state.email} onChange={({ target }) => dispatch({ type: 'update-email', value: target.value })} />
+                  <Label htmlFor="email" error={touched.email && errors.email}>
+                    ✉️ Email
+                  </Label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    {...getFieldProps("email")}
+                  />
                 </Field>
                 <Field>
-                    <Label error={state.errors?.password}> Password</Label>
-                    <Input name="password" type="password" value={state.password} onChange={({ target }) => dispatch({ type: 'update-password', value: target.value })} />
+                  <Label
+                    htmlFor="password"
+                    error={touched.password && errors.password}
+                  >
+                    🔑 Password
+                  </Label>
+                  <Input
+                    id="password"
+                    type="password"
+                    name="password"
+                    {...getFieldProps("password")}
+                  />
                 </Field>
-                <Button disabled={hasError()}>{isSignUp ? "Sign up" : "Log in"}</Button>
-                <p className="log-in-prompt">
-                    {isSignUp ? "Have" : "Need"} an account?
-                            <span className="small">
-                        Click below, fill out the form, et voila!
-                            </span>
-                </p>
-                <Button   onClick={() => setIsSignUp(!isSignUp)}>
-                    {isSignUp ? "Log in" : "Sign up"}
+                <Button
+                  disabled={isSubmitting || !isValid}
+                  loading={isSubmitting}
+                >
+                  {isSignUp ? "Sign up" : "Log in"}
                 </Button>
-                <p className="error">{"errors?.auth"} </p>
-            </div>
-        </div>
-        <style jsx>{`
+                <p className="error">{errors?.general}</p>{" "}
+              </div>
+            </Form>
+          )}
+        </Formik>
+        <p className="log-in-prompt">
+          {isSignUp ? "Have" : "Need"} an account?
+          <span className="small">
+            Click below, fill out the form, et vola!
+          </span>
+        </p>
+        <Button onClick={() => setIsSignUp(!isSignUp)}>
+          {isSignUp ? "Log in" : "Sign up"}
+        </Button>
+      </div>
+      <style jsx>{`
         .error {
           text-align: center;
           color: var(--error);
@@ -113,7 +169,6 @@ export default (props) => {
           margin-bottom: 0.5rem;
         }
       `}</style>
-
-
     </>
-}
+  );
+};
