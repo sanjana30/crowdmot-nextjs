@@ -25,6 +25,12 @@ export default ({ children }) => (
       html {
         box-sizing: border-box;
         font-family: var(--font);
+        padding-top: 10px;
+       
+        
+      }
+      a, p{
+        margin-right: 10px;
       }
       * > * {
         box-sizing: border-box;

@@ -20,6 +20,7 @@ export default (props) => {
   const [isSignUp, setIsSignUp] = useState(false);
 
   const handleSubmit = async (values, context) => {
+    console.log(values);
     const request = await fetch("/api/authenticate", {
       method: "POST",
       headers: {

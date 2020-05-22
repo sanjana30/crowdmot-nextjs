@@ -1,6 +1,7 @@
 {
   "devFiles": [
     "static/runtime/react-refresh.js",
+    "static/runtime/react-refresh.js.map",
     "static/development/dll/dll_80e163c04e734e50beb0.js",
     "static/development/dll/dll_80e163c04e734e50beb0.js.map"
   ],
@@ -24,7 +25,20 @@
       "static/runtime/main.js"
     ],
     "/_polyfills": [
-      "static/runtime/polyfills.js"
+      "static/runtime/polyfills.js",
+      "static/runtime/polyfills.js.map"
+    ],
+    "/about": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/contact": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ],
     "/index": [
       "static/runtime/webpack.js",

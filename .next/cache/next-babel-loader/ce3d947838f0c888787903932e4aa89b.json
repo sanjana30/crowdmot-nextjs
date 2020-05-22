@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Mongoose from \"mongoose\";\nvar User = Mongoose.models.Users || Mongoose.model(\"Users\", {\n  name: String,\n  email: String,\n  createAt: {\n    \"default\": Date.now(),\n    type: Date\n  },\n  passwordId: String\n});\nexport default User;","map":null,"metadata":{},"sourceType":"module"}
