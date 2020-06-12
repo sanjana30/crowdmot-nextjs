@@ -1,6 +1,6 @@
 import DatabaseService from "../../services/database";
 import AuthService from "../../services/auth";
-import User from "../../models/user";
+import User from "../../models/User";
 
 export default async (req, res) => {
   if (req.method !== "GET") {
