@@ -21,10 +21,12 @@ export default function useAuth(initialData) {
       }
     },
     { initialData }
+    
   );
-
+    
   return {
     ...user,
+    
     logout() {
       Cookie.remove("_wsp");
     },

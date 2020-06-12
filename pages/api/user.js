@@ -21,7 +21,7 @@ export default async (req, res) => {
 
   DatabaseService.connect();
 
-  const user = await User.findOne({ _id: userId }, { name: -1 });
+  const user = await User.findOne({ _id: userId }, { name: -1 }, {email: -1});
 
   res.json(user.toObject());
 };

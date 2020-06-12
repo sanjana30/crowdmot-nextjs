@@ -57,7 +57,7 @@ export default (props) => {
 
   return (
     <>
-      <div className="page">
+      <div className="page" style={{backgroundColor: "#ffffff"}}>
         <Formik
           initialValues={{
             name: "",

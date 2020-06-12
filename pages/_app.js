@@ -7,6 +7,8 @@ export default ({ Component, pageProps }) => {
     <>
       <Head>
         <title>CrowdMOT</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet"/>
       </Head>
       <GlobalStyles>
         <Component {...pageProps} />

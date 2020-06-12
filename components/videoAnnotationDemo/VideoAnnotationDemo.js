@@ -7,7 +7,7 @@ import { CSVLink, CSVDownload } from "react-csv";
 import Modal from './Modal';
 
 class Demo extends Component {
-	
+
 	constructor(props) {
 		super(props)
 		this.myRef = React.createRef()
@@ -213,13 +213,14 @@ class Demo extends Component {
 	scrollToRef = () => window.scrollTo(0, this.myRef.current.offsetTop)
 	handleResultSubmit = result => {
 		this.setState({ result: result });
-		this.setState({videoDuration: this.state.videoDuration})
+		this.setState({ videoDuration: this.state.videoDuration })
 		this.setState({
 			showMe: true
 		});
 
 		alert("Submission was successful. Use the buttons at the end of the page to download data points.")
 		// this.createRawData(result);
+
 	}
 
 	executeScroll = () => this.scrollToRef(myRef)
@@ -238,13 +239,13 @@ class Demo extends Component {
 		})
 	}
 
-	handleVidFrameChange = event =>{
+	handleVidFrameChange = event => {
 		console.log(event.target.value)
-		this.setState({videoFramerate: event.target.value})
+		this.setState({ videoFramerate: event.target.value })
 	}
-	handleVidDurationChange = event =>{
+	handleVidDurationChange = event => {
 		console.log(event.target.value)
-		this.setState({videoDuration: event.target.value})
+		this.setState({ videoDuration: event.target.value })
 	}
 	handleErrorSubmit = event => {
 		event.preventDefault();
@@ -308,7 +309,7 @@ class Demo extends Component {
 
 		}
 		);
-		
+
 	}
 
 	isJsonString = str => {
@@ -319,8 +320,8 @@ class Demo extends Component {
 		}
 		return true;
 	}
-//async (context)
-	saveInformation = async() => {
+	//async (context)
+	saveInformation = async () => {
 		// console.log(this.state)
 		// console.log(getServerSideProps())
 		// let values = {defaultAnnotations: ""};
@@ -336,7 +337,7 @@ class Demo extends Component {
 		};
 		const response = await fetch('/mp4toavi', requestOptions);
 		//const data = await response.json();
-		
+
 	}
 
 
@@ -344,12 +345,12 @@ class Demo extends Component {
 	//function for getting interpolated data starts
 	getInterpolatedData = event => {
 		event.preventDefault();
-		
+
 		//const duration = JSON.parse(JSON.stringify(this.state.result.duration))
-		
+
 		const duration = this.state.videoDuration;
 		const timerate = duration * this.state.videoFramerate;
-		
+
 		//collect frame/second for the video
 		const timeNow = (new Date()).getTime().toString(36);
 		let interpolatedResult = JSON.parse(JSON.stringify(this.state.result));
@@ -416,7 +417,7 @@ class Demo extends Component {
 							let interpolW = source.width + (wSlope * off)
 							let interpolH = source.height + (hSlope * off)
 							temp.annotations[i].incidents.splice(j + 1, 0, ({
-								id: `${timeNow}`, name: `${timeNow}`, x: interpolX, y: interpolY, height: interpolH, width: interpolW, time: k, status, parentName: temp.annotations[i].parentName, label: interpolatedResult.annotations[i].label, generated:1
+								id: `${timeNow}`, name: `${timeNow}`, x: interpolX, y: interpolY, height: interpolH, width: interpolW, time: k, status, parentName: temp.annotations[i].parentName, label: interpolatedResult.annotations[i].label, generated: 1
 							}));
 
 						}
@@ -536,13 +537,13 @@ class Demo extends Component {
 			cell_frame.innerHTML = temp[i].time;
 			cell_lost.innerHTML = 0;
 			cell_occluded.innerHTML = 0;
-			if(temp[i].generated ==1){
+			if (temp[i].generated == 1) {
 				cell_generated.innerHTML = 1;
 			}
-			else{
-				cell_generated.innerHTML=0;
+			else {
+				cell_generated.innerHTML = 0;
 			}
-			
+
 			cell_label.innerHTML = temp[i].label;
 			cell_parent.innerHTML = temp[i].parentName;
 			//row.appendChild(cell_id);
@@ -576,7 +577,7 @@ class Demo extends Component {
 		this.download_csv(csv.join("\n"), filename);
 	}
 
-	
+
 
 	download_csv = (csv, filename) => {
 		var csvFile;
@@ -601,7 +602,7 @@ class Demo extends Component {
 		var html = document.getElementById("interpol-table").outerHTML;
 		this.export_table_to_csv(html, "table.csv");
 	}
-	
+
 
 	handleVideoLoad = (e) => {
 		let files = e.target.files;
@@ -611,33 +612,33 @@ class Demo extends Component {
 				videoFileURL: URL.createObjectURL(file),
 				videoFileObject: file
 			});
-		}	
+		}
 	}
 
-	
 
 
- download = (content, fileName, contentType) =>{
-	const a = document.createElement("a");
-	const file = new Blob([content], { type: contentType });
-	a.href = URL.createObjectURL(file);
-	a.download = fileName;
-	a.click();
-   }
-   
-    onDownload= () =>{
+
+	download = (content, fileName, contentType) => {
+		const a = document.createElement("a");
+		const file = new Blob([content], { type: contentType });
+		a.href = URL.createObjectURL(file);
+		a.download = fileName;
+		a.click();
+	}
+
+	onDownload = () => {
 		let temp = JSON.parse(JSON.stringify(this.state.result))
-		for(let n=0; n<temp.annotations.length; n++){
+		for (let n = 0; n < temp.annotations.length; n++) {
 			delete temp.annotations[n].name
 		}
-		for(let a=0; a<temp.annotations.length; a++){
-			for(let b=0; b<temp.annotations[a].incidents.length; b++){
+		for (let a = 0; a < temp.annotations.length; a++) {
+			for (let b = 0; b < temp.annotations[a].incidents.length; b++) {
 				delete temp.annotations[a].incidents[b].name;
 				delete temp.annotations[a].incidents[b].label;
 			}
 		}
-	this.download(JSON.stringify(temp), "yourfile.json", "text/plain");
-   }
+		this.download(JSON.stringify(temp), "yourfile.json", "text/plain");
+	}
 
 	render() {
 
@@ -645,15 +646,67 @@ class Demo extends Component {
 		let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(result));
 		return (
 			<>
-				<Container fluid className="py-3">
+				<Container fluid className="py-3" style={{ backgroundColor: "#ffffff", fontFamily: "Arvo, seri" }}>
 
-					<h1 className="display-4  text-center">CrowdMOT: A Video Annotation Tool</h1>
+					<h1 className="display-4  text-center" style={{ color: "#000000" }}>CrowdMOT: A Video Annotation Tool</h1>
 					<Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
 						<Col>
 							<Instructions />
 						</Col>
 					</Row>
-					<Form className="mb-2 col-xs-12 col-lg-10 offset-lg-1" onSubmit={this.handleSubmit}>
+					<Card className="mb-2 col-xs-8 col-lg-6 offset-lg-1" style={{ borderColor: "#6bc3b9", border: "1px solid #6bc3b9", paddingTop: 20, paddingBottom: 20, backgroundColor: "#ffffff" }}>
+						<CardBody>
+							<Form className="mb-2 col-xs-12 col-lg-10 offset-lg-1" onSubmit={this.handleSubmit}>
+								<FormGroup>
+									<Label for="URL"><b>Enter the video URL:</b></Label>
+									<Input type="text" name="url" placeholder="http://..." style={{ borderColor: "#6bc3b9", border: "1px solid #6bc3b9" }} ref={this.videoFileInput} value={input.url} onChange={this.handleChange} />
+								</FormGroup>
+								<h5>OR</h5>
+								<FormGroup>
+									<Label for="exampleFile" className="pr-2"><b>Upload Video</b></Label><br></br>
+									<input type="file" name="videofile" id="videoFile" onChange={this.handleVideoLoad} />
+								</FormGroup>
+								<hr style={{border: "0.7px solid #6bc3b9"}}/>
+								<FormGroup>
+									<Label for="URL"><b>Duration of the Video (in seconds):</b></Label>
+									<Input type="text" name="videoDuration" style={{ borderColor: "#6bc3b9", border: "1px solid #6bc3b9" }} placeholder="5.00" onChange={this.handleVidDurationChange} />
+								</FormGroup>
+								<FormGroup>
+									<Label for="URL"><b>Framerate of the Video:</b></Label>
+									<Input type="text" name="videoFramerate" style={{ borderColor: "#6bc3b9", border: "1px solid #6bc3b9" }} placeholder="60" value={this.state.videoFramerate} onChange={this.handleVidFrameChange} />
+								</FormGroup>
+								<FormGroup>
+									<Label for="Annotation Width"><b>Video Width</b></Label>
+									<Input type="text" name="videoWidth" style={{ borderColor: "#6bc3b9", border: "1px solid #6bc3b9" }} placeholder="number" value={input.videoWidth} onChange={this.handleChange} />
+								</FormGroup>
+								<FormGroup>
+									<Label for="exampleFile" className="pr-2"><b>Upload Previous Annotations</b></Label><br></br>
+									<input type="file" name="file" id="exampleFile" ref={this.fileInput} />
+								</FormGroup>
+								<br></br>
+								<Row style={{ paddingLeft: 10 }}>
+									<Col style={{ padding: 0 }}>
+										<Button color="primary" style={{ color: '#ffffff', width: 200 }}>Submit</Button>
+									</Col>
+								</Row>
+							</Form>
+						</CardBody>
+						<Card style={{ position: "absolute", left: 650, top: 120, height: 400, maxWidth: 500, padding: 20, backgroundColor: '#ffd1dc', backgroundImage: "linear-gradient(-45deg, #ee7752,  #e73c7e, #23a6d5,#23d5ab)",backgroundSize: "400% 400%", animation:"change 10s ease-in-out infinite", opacity: 0.8 }} className="mb-2 col-xs-4 col-lg-2">
+							<CardBody>
+								<h4 style={{ color: "#ffffff", textAlign: "center", marginBottom: 15, letterSpacing: 2, lineHeight:"1.5rem", fontSize: 28, fontWeight: "bold"}}>CrowdMOT</h4>
+								<p style={{padding: 10, color: "#ffffff", margin:0, fontFamily: 'Arvo, serif', letterSpacing: "0.05rem", lineHeight:"1.5rem"}}>We introduce a new video annotation platform for MOT, which we call <b>CrowdMOT</b>. It is designed to support lineage tracking as well as to not require expert workers for video annotation.</p>
+								{/* <ul style={{color: "#ffffff"}}>
+									<li style={{ padding: 10 }}>
+										<i>Video link/file</i> provided will replace the video file in the annotation player below.
+									</li>
+									<li style={{ padding: 10 }}>Video <i>frame-rate & duration</i> helps generated accurate interpolations.</li>
+									<li style={{ padding: 10 }}>Default value for frame-rate and duration are <i>60 (fps) and 5.04 (seconds)</i> respectively.</li>
+									<li style={{ padding: 10 }}><i>Video width</i> helps determine the canvas size for video display.</li>
+								</ul> */}
+							</CardBody>
+						</Card>
+					</Card>
+					{/* <Form className="mb-2 col-xs-12 col-lg-10 offset-lg-1" onSubmit={this.handleSubmit}>
 						<FormGroup>
 							<Label for="URL"><b>Enter the video URL:</b></Label>
 							<Input type="text" name="url" placeholder="http://..." ref={this.videoFileInput} value={input.url} onChange={this.handleChange} />
@@ -681,12 +734,12 @@ class Demo extends Component {
 						</FormGroup>
 						<Row className="my-3 col-xs-12 col-lg-10 offset-lg-6">
 							<Col>
-								<Button>Submit</Button>
+								<Button color="primary" style={{ color: '#ffffff', width:200 }}>Submit</Button>
 							</Col>
 						</Row>
-					</Form>
+					</Form> */}
 
-					<Row className="py-3" style={{ background: "rgb(246, 246, 246)" }}>
+					<Row className="py-3 mb-2 col-xs-12 col-lg-10 offset-lg-1" style={{ background: "rgb(246, 246, 246)", marginTop: 40 }}>
 
 						<Col>
 							<TwoDimensionalVideo
@@ -723,34 +776,77 @@ class Demo extends Component {
 						</Col>
 						{/* <Row><Col><Modal modalShow={this.state.modalShow}/></Col></Row> */}
 					</Row>
-{/* */}
-					<Row className="my-3 col-xs-12" ref={this.myRef}>
+
+					<Card className="mb-2 col-xs-12 col-lg-10 offset-lg-1" style={{ display: this.state.showMe ? "block" : "none",  borderColor: "#6bc3b9", border: "0px solid #6bc3b9", backgroundColor: "#fffff0", paddingTop: 10, paddingBottom: 10, textAlign: "center" }}>
+						<CardBody>
+							<Row className="my-3 col-xs-12" ref={this.myRef}>
+								<Col className="col-lg-6" style={{ alignItems: "right", display: "flex" }}>
+									<Button color="primary" style={{ display: this.state.showMe ? "block" : "none", display: "block", color: '#ffffff', width: 250, position: "absolute", left: 200 }} className="download-buttons pull-right" onClick={this.onDownload}>
+										Download Raw Data
+									</Button>
+								</Col>
+								<Col className="col-lg-6">
+									<Button color="primary" className="download-buttons" style={{ display: this.state.showMe ? "block" : "none", width: 250, display: "block", position: "absolute", left: 100}} onClick={this.getInterpolatedData}>Generate Interpolated Data</Button>
+								</Col>
+							</Row>
+
+
+
+							<Row className="my-3 col-xs-12">
+								<Col>
+									<table id="interpol-table" style={{ display: 'none' }} className="interpoltableclasstabletr">
+										<tbody>
+											<tr className="interpoltableclasstabletr">
+												<th className="interpoltableclasstdth">Track ID</th>
+												<th className="interpoltableclasstdth">x-min</th>
+												<th className="interpoltableclasstdth">y-min</th>
+												<th className="interpoltableclasstdth">width</th>
+												<th className="interpoltableclasstdth">height</th>
+												<th className="interpoltableclasstdth">Frame</th>
+												<th className="interpoltableclasstdth">Lost</th>
+												<th className="interpoltableclasstdth">Occluded</th>
+												<th className="interpoltableclasstdth">Generated</th>
+												<th className="interpoltableclasstdth">Label</th>
+												<th className="interpoltableclasstdth">Parent</th>
+											</tr>
+										</tbody>
+									</table>
+								</Col>
+							</Row>
+
+							<Row>
+								<Col>
+									<table id="raw-table" style={{ display: 'none' }} className="rawtableclass">
+										<tbody>
+											<tr className="rawtableclass">
+
+												<th className="rawtableclasstdth"> </th>
+
+											</tr>
+										</tbody>
+									</table>
+								</Col>
+							</Row>
+						</CardBody>
+					</Card>
+					{/* <Row className="my-3 col-xs-12" ref={this.myRef}>
 						<Col>
 							<Button color="primary" style={{ display: this.state.showMe ? "block" : "none", color: '#ffffff' }} className="download-buttons" onClick={this.onDownload}>
 								Download Raw Data
-								
-								{/* <CSVLink data={JSON.stringify(result, null,2)} style={{ color: '#ffffff' }}>Download Raw Data</CSVLink> */}
 							</Button>
 						</Col>
 						<Col>
 							<Button color="primary" className="download-buttons" style={{ display: this.state.showMe ? "block" : "none" }} onClick={this.getInterpolatedData}>Generate Interpolated Data</Button>
 						</Col>
-						{/* <Col>
-							<Button id="export-interpol" color='primary' style={{
-								display: 'none', color: '#ffffff',
-								border: `1px solid`,
-							}} onClick={this.createTable}>Download Interpolated Data</Button>
-						</Col> */}
 					</Row>
 					
 
-					{/* create invisible table for interpolated data */}
+					
 					<Row className="my-3 col-xs-12">
 						<Col>
 							<table id="interpol-table" style={{ display: 'none' }} className="interpoltableclasstabletr">
 								<tbody>
 									<tr className="interpoltableclasstabletr">
-										{/* <th>ID</th> */}
 										<th className="interpoltableclasstdth">Track ID</th>
 										<th className="interpoltableclasstdth">x-min</th>
 										<th className="interpoltableclasstdth">y-min</th>
@@ -768,32 +864,41 @@ class Demo extends Component {
 						</Col>
 					</Row>
 
-						<Row>
-							{/* <form ref="uploadForm" id="uploadForm" method="post" action="/mp4toavi">
-								<input type="file" name="mp4" encType="multipart-form-data"></input>
-								<input type="submit" name="Convert">Convert</input>
-							</form> */}
-						</Row>
-					{/* <Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
-						<Col>
-							<Card><CardBody><a href={dataStr} className="btn btn-secondary btn-lg" download={`${params.url}.json`}> Download the Annotations</a></CardBody></Card>
-
-
-						</Col>  </Row> */}
 					<Row>
 						<Col>
-					<table id="raw-table" style={{ display: 'none' }} className="rawtableclass">
+							<table id="raw-table" style={{ display: 'none' }} className="rawtableclass">
 								<tbody>
 									<tr className="rawtableclass">
-										{/* <th>ID</th> */}
+										
 										<th className="rawtableclasstdth"> </th>
 										
 									</tr>
 								</tbody>
 							</table>
-							</Col>
-							</Row>
-					
+						</Col>
+					</Row>  */}
+
+					{/* <Row>
+							<form ref="uploadForm" id="uploadForm" method="post" action="/mp4toavi">
+								<input type="file" name="mp4" encType="multipart-form-data"></input>
+								<input type="submit" name="Convert">Convert</input>
+							</form>
+						</Row>
+					<Row className="my-3 col-xs-12 col-lg-10 offset-lg-1">
+						<Col>
+							<Card><CardBody><a href={dataStr} className="btn btn-secondary btn-lg" download={`${params.url}.json`}> Download the Annotations</a></CardBody></Card>
+
+
+						</Col>  </Row> */}
+					{/* <CSVLink data={JSON.stringify(result, null,2)} style={{ color: '#ffffff' }}>Download Raw Data</CSVLink> */}
+					{/* <Col>
+							<Button id="export-interpol" color='primary' style={{
+								display: 'none', color: '#ffffff',
+								border: `1px solid`,
+							}} onClick={this.createTable}>Download Interpolated Data</Button>
+						</Col> */}
+
+
 
 
 				</Container>

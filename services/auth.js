@@ -85,9 +85,10 @@ async function getUserFromCookie(req) {
 
   DatabaseService.connect();
 
-  const user = await User.findOne({ _id: payload.id }, { name: -1 });
-
+  const user = await User.findOne({ _id: payload.id });
+  console.log("returned user is: "+user)
   return JSON.parse(JSON.stringify(user));
+  
 }
 
 export default {

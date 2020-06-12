@@ -106,7 +106,7 @@ class Instructions extends Component {
 						</CardBody>
           </Card>
         </Collapse>
-				<Button block color="secondary" onClick={this.toggle}>{this.state.collapse? "Hide": "Show" } Instructions</Button>
+				<Button block color="primary" style={{marginLeft: 120, marginRight: 50, width: 900}} onClick={this.toggle}>{this.state.collapse? "Hide": "Show" } Instructions</Button>
 				</div>
 	)}
 }

@@ -1,0 +1,7 @@
+{
+    "name": "crowdmot-nextjs",
+    "version": 2,
+    "env": {
+      "MONGODB_URI": "mongodb+srv://crowdmotUser:crowdmot@123@cluster0-2o56v.mongodb.net/test?retryWrites=true&w=majority"
+    }
+  }

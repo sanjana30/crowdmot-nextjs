@@ -11,14 +11,14 @@ export default (props) => {
 
     return (
         <>
-            <div className="fixed-top px-3 text-right">
+            {/* <div className="fixed-top px-3 text-right">
                 <a href="https://www.npmjs.com/package/react-annotation-tool">
                     <img src="https://img.shields.io/npm/v/react-annotation-tool.svg?branch=master" className="img-fluid" alt="Responsive image" />
                 </a>
-            </div>
-            <div className="login-link  px-3 text-left" style={{ margin: 10 }}>
+            </div> */}
+            <div className="login-link  px-3 text-left" style={{fontFamily: "Arvo, seri", paddingTop: 20, paddingBottom:20, backgroundColor: "#ffffff", borderBottom: "1px solid #d7d7d7" }}>
             <Link href="/"><a>Home</a></Link>
-           <Link href="/about"><a>About</a></Link>
+           <Link href="/about"><a style={{color: "#000000"}}>About</a></Link>
            <Link href="/contact"><a>Contact</a></Link>
                 {user._id
                     ? <p style={{ display: "inline", color: "#007bff" }}>{user.name}</p>
@@ -30,7 +30,7 @@ export default (props) => {
                     : ``}
                 
             </div>
-            <div className="text-right">
+            <div className="text-right" style={{backgroundColor: "#ffffff", fontFamily: "Arvo, seri"}}>
                 <Container fluid className="py-3">
 
                     <h3 className="display-4  text-center">CrowdMOT: A Video Annotation Tool</h3>

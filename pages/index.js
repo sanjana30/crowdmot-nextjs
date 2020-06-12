@@ -6,39 +6,44 @@ import useAuth from "../hooks/useAuth";
 import AuthService from "../services/auth";
 
 
+import window from 'global'
+
+const mySpecialWindowFunction = () => {
+    return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+};
 const DynamicVideoComponent = dynamic(import('../components/videoAnnotationDemo/VideoAnnotationDemo.js'), {
   ssr: false
 })
 
 export default (props) => {
   const user = useAuth(props.user);
-
+  console.log("User is:"+JSON.stringify(user))
   return (
     <>
       {/* <Link href="/login"><button>Login</button>
         </Link> */}
-        
-      <div className="fixed-top px-3 text-right">
+     
+      {/* <div className="fixed-top px-3 text-right">
         <a href="https://www.npmjs.com/package/react-annotation-tool">
           <img src="https://img.shields.io/npm/v/react-annotation-tool.svg?branch=master" className="img-fluid" alt="Responsive image" />
         </a>
-      </div>
-      <div className="login-link  px-3 text-left">
-          <Link href="/"><a>Home</a></Link>
-           <Link href="/about"><a>About</a></Link>
-           <Link href="/contact"><a>Contact</a></Link>
+      </div> */}
+      <div className="login-link  px-3 text-left" style={{backgroundColor: "#ffffff", paddingTop: 20, paddingBottom:20, borderBottom: "1px solid #d7d7d7"}}>
+          <Link href="/"><a style={{color: "#000000", fontFamily: "Arvo, seri"}}>Home</a></Link>
+           <Link href="/about"><a style={{fontFamily: "Arvo, seri"}}>About</a></Link>
+           <Link href="/contact"><a style={{ fontFamily: "Arvo, seri"}}>Contact</a></Link>
            {user._id
-          ? <p style={{display: "inline", color: "#007bff"}}>{user.name}</p>
-          : <Link href="/login" className='loginClass'><a>Login</a>
+          ? <Link href="/profile" style={{display: "inline", color: "#007bff",  fontFamily: "Arvo, seri"}}>{user.name}</Link>
+          : <Link href="/login" className='loginClass'><a style={{ fontFamily: "Arvo, seri"}}>Login</a>
              </Link>}
-        {user._id
+        {/* {user._id
           ? <Link href="/profile" ><a>Profile</a>
           </Link>
-          : ``}
+          : ``} */}
       </div>
 
 
-      <hr />
+      {/* <hr /> */}
       <DynamicVideoComponent />
       <style jsx>{`
         .login-link {

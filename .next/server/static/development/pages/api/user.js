@@ -182,6 +182,8 @@ __webpack_require__.r(__webpack_exports__);
     _id: userId
   }, {
     name: -1
+  }, {
+    email: -1
   });
   res.json(user.toObject());
 });
@@ -310,9 +312,8 @@ async function getUserFromCookie(req) {
   _database__WEBPACK_IMPORTED_MODULE_3__["default"].connect();
   const user = await _models_User__WEBPACK_IMPORTED_MODULE_4__["default"].findOne({
     _id: payload.id
-  }, {
-    name: -1
   });
+  console.log("returned user is: " + user);
   return JSON.parse(JSON.stringify(user));
 }
 
@@ -351,7 +352,7 @@ See more info here: https://err.sh/next.js/missing-env-value`)
                 return target[prop]
               }
             })
-          .MONGO_URL || "mongodb://localhost:27017"}/crowdmot`, {
+          .MONGO_URL || "mongodb://localhost:27017"}/crowdmot` || 'mongodb+srv://crowdmotUser:crowdmot@123@cluster0-2o56v.mongodb.net/crowdmot?retryWrites=true&w=majority', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       createIndexes: true
