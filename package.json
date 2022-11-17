@@ -32,7 +32,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.15",
-    "next": "^9.3.7-canary.4",
+    "next": "^13.0.3",
     "randomcolor": "^0.5.4",
     "react": "^16.8.4",
     "react-annotation-tool": "^1.1.5",
